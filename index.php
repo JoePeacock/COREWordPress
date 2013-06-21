@@ -11,24 +11,26 @@
 get_header(); ?>
 
 <div class="container">
+  <div class="span12 sloganPage">
+    <h3>"We are a full service environmental consulting firm, 
+committed to finding environmental solutions for our clients"</h3>
+  </div>
+</div>
+
+
+<div class="imageSlider">
+  <div class="container">
+    <div class="span12">
+      <img src="http://127.0.0.1/wordpress/wp-content/uploads/2013/06/slider4.png">
+    </div>
+  </div>
+</div>
+
+<div class="container">
   <div class="row">
     <div class="span12">
-       <?php
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        query_posts( array( 'post_type' => 'post', 'paged'=>$paged, 'showposts'=>0) );
-        if (have_posts()) : while ( have_posts() ) : the_post(); ?>
+       
 
-        <div <?php post_class(); ?>>
-          <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><h3><?php the_title();?></h3></a>
-          <p class="meta"><?php echo bootstrapwp_posted_on();?></p>
-          <div class="row">
-            <div class="span12">
-              <?php the_excerpt();?>
-            </div>
-          </div><!-- /.row -->
-          <hr />
-        </div><!-- /.post_class -->
-        <?php endwhile; endif;?>
     </div>
   </div>
 </div>

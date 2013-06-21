@@ -50,29 +50,52 @@
     <?php wp_head(); ?>
       </head>
   <body <?php body_class(); ?>  data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="10">
-    <div class="navbar navbar-relative-top">
-           <div class="navbar-inner">
-             <div class="container">
-           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-          <span class="pull-right">
+    <div class="navi-header">
+      <div class="container">
+        <div class="span8">
+           <div class="top-menu pull-left">
+            <?php
+             wp_nav_menu( array(
+                'menu'            => 'Top Menu',
+                'container_class' => 'nav-collapse',
+                'menu_class'      => 'top-menu-links',
+                'fallback_cb'     => '',
+                'menu_id'          => 'Top Menu', 
+                'walker' => new Bootstrapwp_Walker_Nav_Menu()
+            ) ); ?>              
+          </div>
+        </div>
+        <div class="span3">
+          <div class="pull-right slogan">
+            <?php echo bloginfo('description'); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-navbar">
+      <div class="container">
+        <div class="span4">
+          <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="http://127.0.0.1/wordpress/wp-content/uploads/2013/06/logo.png"></a>
+        </div>
+        <div class="span7">
             <?php
              /** Loading WordPress Custom Menu  **/
              wp_nav_menu( array(
-                'menu'            => 'main-menu',
-                'container_class' => 'nav-collapse',
-                'menu_class'      => 'nav',
-                'fallback_cb'     => '',
-                'menu_id' => 'main-menu',
+                'menu'            => 'Primary',
+                'menu_class'      => 'navi pull-right',
+                'menu_id'          => 'primary', 
                 'walker' => new Bootstrapwp_Walker_Nav_Menu()
             ) ); ?>
-          </span>
         </div>
       </div>
     </div>
     <!-- End Header -->
-              <!-- Begin Template Content -->
+
+
+<div class="page-bg">
+
+
+
+
+<!-- begin CONTENT -->
