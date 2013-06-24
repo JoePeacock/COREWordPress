@@ -4915,6 +4915,13 @@ a.badge:hover {
 .visible-desktop {
   display: inherit !important;
 }
+.navbar-inner .container {
+  width:940px;
+}
+.navbar .nav > li {
+  width:153px;
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
   .hidden-desktop {
     display: inherit !important;
@@ -4944,6 +4951,12 @@ a.badge:hover {
   }
 }
 @media (min-width: 1200px) {
+  .navbar .nav > li {
+    width:192px;
+  }
+  .navbar-inner .container {
+    width:1170px;
+  }
   .row {
     margin-left: -30px;
     *zoom: 1;

@@ -47,54 +47,84 @@
   <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv7e3U86V4kQ_cL8Ao7BzriEtBIbauRMI&sensor=false ">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+          var buf = new google.maps.LatLng(42.956916, -78.708054);
+
+          var maspeth = new google.maps.LatLng(40.731606, -73.921304);
+
+          var center = new google.maps.LatLng(40.731606, -73.921304);
+
+        var mapOptions = {
+          center: center,
+          zoom: 13,
+          disableDefaultUI: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+
+        var buffalo = new google.maps.Marker({
+          position: buf,
+          map: map,
+        });
+
+        var nyc = new google.maps.Marker({
+          position: maspeth,
+          map: map,
+        });
+
+      }
+       
+    </script>
+    
     <?php wp_head(); ?>
       </head>
-  <body <?php body_class(); ?>  data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="10">
-    <div class="navi-header">
-      <div class="container">
-        <div class="span8">
-           <div class="top-menu pull-left">
-            <?php
-             wp_nav_menu( array(
-                'menu'            => 'Top Menu',
-                'container_class' => 'nav-collapse',
-                'menu_class'      => 'top-menu-links',
-                'fallback_cb'     => '',
-                'menu_id'          => 'Top Menu', 
-                'walker' => new Bootstrapwp_Walker_Nav_Menu()
-            ) ); ?>              
-          </div>
-        </div>
-        <div class="span3">
-          <div class="pull-right slogan">
-            <?php echo bloginfo('description'); ?>
-          </div>
-        </div>
-      </div>
-    </div>
+  <body <?php body_class(); ?>  data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="10" onload="initialize()">
 
+  <div class="header">
     <div class="main-navbar">
       <div class="container">
-        <div class="span4">
-          <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="http://127.0.0.1/wordpress/wp-content/uploads/2013/06/logo.png"></a>
+        <div class="row-fluid">
+          <div class="span4">
+            <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo( 'template_url' );?>/img/logo.png"></a>
+          </div>
+          <div class="span3 offset5">
+            <div class="headText pull-right">
+              <?php echo get_bloginfo('description') ?>
+            </div>
         </div>
-        <div class="span7">
-            <?php
-             /** Loading WordPress Custom Menu  **/
-             wp_nav_menu( array(
-                'menu'            => 'Primary',
-                'menu_class'      => 'navi pull-right',
-                'menu_id'          => 'primary', 
-                'walker' => new Bootstrapwp_Walker_Nav_Menu()
-            ) ); ?>
         </div>
       </div>
     </div>
-    <!-- End Header -->
 
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <?php
+               wp_nav_menu( array(
+                  'menu'            => 'Primary',
+                  'container_class' => 'nav-collapse',
+                  'menu_class'      => 'nav',
+                  'fallback_cb'     => '',
+                  'walker' => new Bootstrapwp_Walker_Nav_Menu()
+              ) ); ?>   
 
-<div class="page-bg">
-
+        </div>
+      </div>
+    </div> 
+  </div>
 
 
 

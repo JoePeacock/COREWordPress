@@ -28,14 +28,12 @@ get_header(); ?>
 
       <div class="row content">
         <div class="span8">
-           <p class="meta"><?php echo bootstrapwp_posted_on();?></p>
+           <p class="meta"><?php the_date();?></p>
           <?php the_content();?>
           <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
           <?php endwhile; // end of the loop. ?>
           <hr />
            <?php comments_template(); ?>
-
-           <?php bootstrapwp_content_nav('nav-below');?>
 
         </div><!-- /.span8 -->
 

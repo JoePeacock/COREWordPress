@@ -626,10 +626,10 @@
 
       clearMenus()
 
-      if (!isActive) {
+/*      if (!isActive) {
         $parent.toggleClass('open')
         $this.focus()
-      }
+      }*/
 
       return false
     }
