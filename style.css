@@ -227,6 +227,7 @@ a.menu:after, .dropdown-toggle:after {
 	background-repeat: no-repeat;
 	background-color: #e4e3da;
 	padding-bottom: 10px;
+	padding-top: 5px;
 }
 
 .bg {
@@ -237,6 +238,12 @@ a.menu:after, .dropdown-toggle:after {
 .slogan {
 	color:#015e2e;
 	line-height: 1.5em;
+	padding-left: 30px;
+	margin-top: 18px;
+}
+
+.slogan h4 {
+		font-weight: normal;
 }
 
 .headText {
@@ -253,13 +260,35 @@ a.menu:after, .dropdown-toggle:after {
 .callout {
 	padding:25px 0;
 	margin-top: 10px;
+	min-height: 0 !important;
+	margin-bottom: 15px;
 }
 
 .callout .btn {
-	margin-top: 10px;
+	margin-top: 20px;
 	margin-right: 60px;
 	padding:15px 20px;
 
+}
+
+.caption {
+	background-color: rgba(0,0,0,0.5);
+	max-width: 600px;
+	position: absolute;
+	margin-top: 50px;
+	color: #fff;
+}
+
+.caption h2 {
+	font-weight: normal;
+	font-size: 1.8em;
+}
+
+.homeContent h2 {
+	color: #555;
+	padding-bottom: 20px;
+	border-bottom:1px dashed #bbb;
+	margin-bottom: 20px !important;
 }
 
 /***************** Orbit ******************/
@@ -523,6 +552,7 @@ html[xmlns] .slides {display: block;}
 	background-position: top;
 	background-color: #e4e3da;
 	padding-bottom: 10px;
+	min-height: 430px;
 }
 
 .page-body {
@@ -533,6 +563,7 @@ html[xmlns] .slides {display: block;}
 	box-shadow:         1px 1px 3px 2px #555;
 	color:#343434;
 	padding-bottom: 20px;
+	min-height: 400px;
 }
 
 .page-body h1,
@@ -582,7 +613,7 @@ html[xmlns] .slides {display: block;}
 }
 
 .homeContent {
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
 /* Page Sidebar

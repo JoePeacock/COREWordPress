@@ -70,22 +70,7 @@ function bootstrapwp_js_loader() {
        wp_enqueue_script('bootstrapjs', get_template_directory_uri().'/js/bootstrap.js', array('jquery'),'0.90', true );
        wp_enqueue_script('prettifyjs', get_template_directory_uri().'/js/google-code-prettify/prettify.js', array('jquery'),'1.0', true );
        wp_enqueue_script('demojs', get_template_directory_uri().'/js/bootstrapwp.demo.js', array('jquery'),'0.90', true );
-
-          wp_enqueue_script('modernizer', get_template_directory_uri() . '/js/modernizr.js', 'jquery', '2.6.2');
-    wp_enqueue_script('respond', get_template_directory_uri() . '/js/respond.js', 'jquery', '1.1', TRUE);
-    wp_enqueue_script('superfish', get_template_directory_uri() . '/js/superfish.js', 'jquery', '1.4.8', TRUE);
-    wp_enqueue_script('easing', get_template_directory_uri() . '/js/easing.js', 'jquery', '1.3', TRUE);
-    wp_enqueue_script('touchSwipe', get_template_directory_uri() . '/js/swipe.min.js', 'jquery', '1.6', TRUE);
-    wp_enqueue_script('respond', get_template_directory_uri() . '/js/respond.js', 'jquery', '1.1',TRUE);
-    wp_enqueue_script('orbit', get_template_directory_uri() . '/js/orbit.js', 'jquery', '1.4', TRUE);
-    wp_enqueue_script('nicescroll', get_template_directory_uri() . '/js/nicescroll.js', 'jquery', '3.1' ,TRUE);
-    wp_enqueue_script('sticky', get_template_directory_uri() . '/js/sticky.js', 'jquery', '1.0', TRUE);
-    wp_enqueue_script('prettyPhoto', get_template_directory_uri() . '/js/prettyPhoto.js', 'jquery', '3.1.5', TRUE);
-    wp_enqueue_script('flexslider', get_template_directory_uri() . '/js/flexslider.min.js', 'jquery', '2.1', TRUE);
-    wp_enqueue_script('isotope', get_template_directory_uri() . '/js/isotope.min.js', 'jquery', '1.5.25' ,TRUE);
-    wp_enqueue_script('carouFredSel', get_template_directory_uri() . '/js/carouFredSel.min.js', 'jquery', '6.2', TRUE);
-    wp_enqueue_script('jplayer', get_template_directory_uri() . '/js/jplayer.min.js', 'jquery', '2.1', TRUE);
-    wp_enqueue_script('nectarFrontend', get_template_directory_uri() . '/js/init.js', array('jquery', 'superfish', 'carouFredSel', 'easing', 'flexslider', 'orbit', 'nicescroll'), '1.0', TRUE);
+       wp_enqueue_script('dds', 'http://coreenv.com/js/jquery.DDSlider.min.js', array('jquery'),'0.90', true );
 
 }
 
