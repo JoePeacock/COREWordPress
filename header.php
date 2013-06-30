@@ -52,41 +52,10 @@
   <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv7e3U86V4kQ_cL8Ao7BzriEtBIbauRMI&sensor=false ">
     </script>
-    <script type="text/javascript">
-      function initialize() {
-          var buf = new google.maps.LatLng(42.956916, -78.708054);
-
-          var maspeth = new google.maps.LatLng(40.731606, -73.921304);
-
-          var center = new google.maps.LatLng(40.731606, -73.921304);
-
-        var mapOptions = {
-          center: center,
-          zoom: 13,
-          disableDefaultUI: true,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-        var map = new google.maps.Map(document.getElementById("map_canvas"),
-            mapOptions);
-
-        var buffalo = new google.maps.Marker({
-          position: buf,
-          map: map,
-        });
-
-        var nyc = new google.maps.Marker({
-          position: maspeth,
-          map: map,
-        });
-
-      }
-       
-    </script>
     
     <?php wp_head(); ?>
       </head>
-  <body <?php body_class(); ?>  data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="10" onload="initialize()">
+  <body <?php body_class(); ?>  data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="10">
 
   <div class="header">
     <div class="main-navbar">

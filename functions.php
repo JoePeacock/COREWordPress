@@ -67,10 +67,11 @@ add_action('wp_enqueue_scripts', 'bootstrapwp_css_loader');
 -------------------------------------------------- */
 
 function bootstrapwp_js_loader() {
-       wp_enqueue_script('bootstrapjs', get_template_directory_uri().'/js/bootstrap.js', array('jquery'),'0.90', true );
-       wp_enqueue_script('prettifyjs', get_template_directory_uri().'/js/google-code-prettify/prettify.js', array('jquery'),'1.0', true );
-       wp_enqueue_script('demojs', get_template_directory_uri().'/js/bootstrapwp.demo.js', array('jquery'),'0.90', true );
-       wp_enqueue_script('dds', 'http://coreenv.com/js/jquery.DDSlider.min.js', array('jquery'),'0.90', true );
+      wp_enqueue_script('bootstrapjs', get_template_directory_uri().'/js/bootstrap.js', array('jquery'),'0.90', true );
+      wp_enqueue_script('prettifyjs', get_template_directory_uri().'/js/google-code-prettify/prettify.js', array('jquery'),'1.0', true );
+
+      wp_enqueue_script('nectarFrontend', get_template_directory_uri() . '/js/init.js', array('jquery', 'superfish', 'carouFredSel', 'easing', 'flexslider', 'orbit', 'nicescroll'), '1.0', TRUE);
+      wp_enqueue_script('core', get_template_directory_uri() . '/js/core.js');
 
 }
 

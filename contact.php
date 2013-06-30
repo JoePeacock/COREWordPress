@@ -32,7 +32,7 @@ get_header(); ?>
     </header>
     <div class="row-fluid content">
       <div class="span6">
-        <?php echo do_shortcode('[contact-form-7 id="306" title="Contact form 1"]') ?>
+        <?php echo do_shortcode('[contact-form-7 id="100" title="Contact form 1"]') ?>
         
       </div>
       <div class="span5">
@@ -43,5 +43,37 @@ get_header(); ?>
   </div>
 </div>
 
+<script type="text/javascript">
+  var _this = this;
+  setTimeout(function() { _this.renderMap() }, 0);
+
+  function renderMap() {
+      var buf = new google.maps.LatLng(42.956916, -78.708054);
+
+      var maspeth = new google.maps.LatLng(40.731606, -73.921304);
+
+      var center = new google.maps.LatLng(40.731606, -73.921304);
+
+    var mapOptions = {
+      center: center,
+      zoom: 13,
+      disableDefaultUI: true,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        mapOptions);
+
+    var buffalo = new google.maps.Marker({
+      position: buf,
+      map: map,
+    });
+
+    var nyc = new google.maps.Marker({
+      position: maspeth,
+      map: map,
+    });
+  }
+</script>
 
 <?php get_footer(); ?>

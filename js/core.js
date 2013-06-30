@@ -1,11 +1,74 @@
-$(document).ready(function(){
-	console.log(imgURL);
-	var imageArray = new Array();
-	imageArray.push(imgURL);
-	console.log("HEllo");
+/*
+*
+* CORE JS
+*
+* Author: Joseph Peacock
+* Date: June 2013
+* version 2.0
+*
+*/
 
-	for (i = 0; i < imageArray.length; i ++) {
-			$('.imageSlider').css('background-image', 'url("' + imageArray[i] + '")');
-} delay()
+!function ($) {
 
-});
+  $(function(){
+    var $window = $(window);
+    // Adding the needed html to WordPress navigation menus //
+    $("ul.dropdown-menu").parent().addClass("dropdown");
+    $("ul.nav li.dropdown a").addClass("dropdown-toggle");
+    $("ul.dropdown-menu li a").removeClass("dropdown-toggle");
+
+    // Commented out to allow for clicks on main links //
+	// $('a.dropdown-toggle').attr('data-toggle', 'dropdown');
+
+    // Adding dropdown caret for dropdown menus, if it does not already exist
+    $('div.nav-collapse .dropdown-toggle:not(:has(b.caret))').append('<b class="caret"></b>');
+    
+    // side bar
+    $('.bs-docs-sidenav').affix({
+      offset: {
+        top: function () { return $window.width() <= 980 ? 290 : 210 }
+      , bottom: 270
+      }
+    });
+
+    // make code pretty
+    window.prettyPrint && prettyPrint();
+
+ 	// add-ons
+    $('.add-on :checkbox').on('click', function () {
+      var $this = $(this)
+        , method = $this.attr('checked') ? 'addClass' : 'removeClass'
+      $(this).parents('.add-on')[method]('active')
+    });
+
+    // add tipsies to grid for scaffolding
+    if ($('#gridSystem').length) {
+      $('#gridSystem').tooltip({
+          selector: '.show-grid > div'
+        , title: function () { return $(this).width() + 'px' }
+      });
+    }
+
+    // tooltip demo
+    $('.tooltip-demo').tooltip({
+      selector: "a[rel=tooltip]"
+    });
+
+    $('.tooltip-test').tooltip();
+    $('.popover-test').popover();
+
+    // popover demo
+    $("a[rel=popover]")
+      .popover()
+      .click(function(e) {
+        e.preventDefault()
+      });
+
+    // carousel demo
+    $('#myCarousel').carousel();
+    // Make first item in the slider active
+    jQuery("#myCarousel .carousel-inner div:first-child").addClass('active');
+
+ });
+
+}(window.jQuery);
