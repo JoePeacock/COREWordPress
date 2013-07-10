@@ -511,6 +511,10 @@ h4.widget-title {
 	font-size: 1.7em;
 }
 
+.project-item img {
+	padding: 20px 20px 20px 0 ;
+}
+
 /* 404 Page 
 ------------------------------------------------- */
 .search404 {
@@ -563,12 +567,105 @@ footer {
 	border-right: none;
 }
 
+/* Responsive Changes
+------------------------------------------------------- */
 
+.navbar .btn-navbar {
+    margin: 5px 30px 0 0;
+}
 
+@media (max-width: 767px) {
+    body {
+      padding:0px;
+    }
+    .headText {
+        float:right;
+        padding-top:10px;
+    }
+    .brand {
+        float:left;
+    }
+    #featured {
+        display:none;
+    }
+    .callout .span4 {
+        display:none;
+    }
+    .page-body {
+        padding:0 30px;
+        padding-bottom:30px;
+    }
+    footer .span4 {
+        float:none;
+        display:none;
+    }
+    footer {
+        text-align:center;
+    }
+    footer .footer-links {
+        float:none;
+        padding-top:0px;
+    }
+    #map_canvas {
+        display:none;
+    }
+    .page-body table {
+        margin:0;
+    }
+}
 
+@media (max-width: 688px) {
+    .headText {
+        display:none;
+    }
+}
+@media (max-width: 979px) {
+    .navbar-inner {
+        padding:0px;
+    }
+    .nav-collapse {
+        background-color:#1f1f1f;
+        margin-top:42px;
+    }
+    .nav-collapse #menu-primay {
+        text-align:center;
+    }
+    .nav-collapse #menu-primary li, 
+    .nav-collapse #menu-primary a {
+        border:none;
+        width:80%;
+        text-align:left;
+        color:#aaa;
+        transition: color 0.3s;
+        line-height:45px;
+        margin-left:7%;
+    }
+    #menu-primary li a {
+        border-bottom: 1px solid #555 !important;
+        font-weight:normal;
+    }
+    .nav-collapse #menu-primary li a:hover {
+        background:transparent;
+        color:#fff;
+    }
+    #menu-primary li .dropdown-menu {
+        display:none;
+    }
+    .headText {
+        display:none;
+    }
+    .brand {
+        margin-left:30px;
+    }
+}
 
-
-
-
-
+@media (max-width: 480px) {
+    .nav-collapse #menu-primary li {
+        width:100%;
+        margin:0 20px;
+    }
+    .nav-collapse #menu-primary li a {
+        margin:0;
+    }
+}    
 
