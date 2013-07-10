@@ -20,6 +20,10 @@ get_header(); ?>
       </div>
     </div>
 
+    <header class="page-title">
+      <h1><?php single_cat_title('', true) ?></h1>
+    </header>
+
     <?php
     global $wp_query;
     $cat_id = get_category_by_slug($wp_query->query['category_name'])->term_id; 
@@ -27,17 +31,16 @@ get_header(); ?>
     $args = array( 'post_type' => 'project', 'posts_per_page' => 10, 'cat' => $cat_id);
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
-    
-    <header class="page-title">
-      <h1><?php single_cat_title('', true) ?></h1>
-    </header>
-    <div class="row-fluid content">
-      <div class="span12">
-        <h2><?php the_title(); ?></h2>
-        <?php the_content();?>
-        <?php endwhile; ?>
+   
+      <div class="row-fluid content project-item">
+        <div class="span12">
+          <h2><?php the_title(); ?></h2>
+          <?php the_content();?>
+        </div>
       </div>
-    </div>
+    
+    <?php endwhile; ?>
+
   </div>
 </div>
 
