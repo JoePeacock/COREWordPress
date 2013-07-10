@@ -226,7 +226,7 @@ a.menu:after, .dropdown-toggle:after {
 	background-image: url('img/bgcolor.png');
 	background-position: top;
 	background-repeat: no-repeat;
-	background-color: #e4e3da;
+	background-color: #dcdcdc;
 	padding-bottom: 10px;
 }
 
@@ -246,6 +246,7 @@ a.menu:after, .dropdown-toggle:after {
 	font-size: 1.2em;
 	font-weight: bold;
 	color:#015e2e;
+	text-align: right;
 }
 
 .headText span {
@@ -389,6 +390,7 @@ list-style: none;
 	box-shadow:         1px 1px 3px 2px #555;
 	color:#343434;
 	padding-bottom: 20px;
+	border-bottom: 1px dashed #bbb;
 }
 
 .page-body h1,
@@ -397,7 +399,7 @@ list-style: none;
 .page-body p, 
 .page-body ul,
 .page-body a {
-	padding:0 30px;
+	padding:0;
 }
 
 .page-body table {
@@ -412,11 +414,12 @@ list-style: none;
 .page-body p {
 	line-height: 1.6em;
 	font-size: 1.1em;
+	padding:0 30px 0 0;
 }
 
 .page-body .page-title {
 	border-bottom: 1px dashed #bbb;
-	margin:0 30px;
+	margin:0;
 	margin-bottom: 20px;
 	font-weight: normal;
 	color:#555;
@@ -428,7 +431,7 @@ list-style: none;
 
 .page-body .breadcrumb {
 	padding:10px 0;
-	margin:0 30px;
+	margin:0 0 0 0;
 	background-color: transparent;
 	border-bottom: 1px dashed #bbb;
 }
@@ -439,7 +442,7 @@ list-style: none;
 
 .homeContent {
 	box-shadow: none;
-	background-color: #e4e3da;
+	background-color: #dcdcdc;
 	border-bottom: 1px dashed #bbb;
 }
 
@@ -501,7 +504,8 @@ h4.widget-title {
 /* Footer
 ------------------------------------------------- */
 footer {
-	background-color: #e4e3da;
+	background-color: #dcdcdc;
+	padding-top: 10px;
 }
 
 .copyright {

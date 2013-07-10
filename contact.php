@@ -14,14 +14,11 @@
 
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?> 
-<div class="page-bg">
-  <div class="container page-body">
+<div class="page-body">
     <div class="row">
-      <div class="span12">
-        <div id="map_canvas" style="height:400px; margin-top:-10px; margin-bottom:5px; border-bottom:1px solid #bbb"></div>
-      </div>
+      <div id="map_canvas" style="height:400px; margin-top:-10px; margin-bottom:5px; border-bottom:1px solid #bbb"></div>
     </div>
-
+  <div class="container">
     <div class="row">
       <div class="span12">
         <?php if ( function_exists( 'breadcrumbs' ) ) breadcrumbs(); ?>

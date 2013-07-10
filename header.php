@@ -64,7 +64,7 @@
           <div class="span4">
             <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo( 'template_url' );?>/img/logo.png"></a>
           </div>
-          <div class="span3 offset5">
+          <div class="span4 offset4">
             <div class="headText pull-right">
               <?php echo get_bloginfo('description') ?>
             </div>

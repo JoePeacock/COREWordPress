@@ -4,18 +4,16 @@
  *
  * Template Name: Default Page
  * Description: Page template with a content container and right sidebar
+ * Author: Joseph Peacock
  *
  * @package WordPress
- * @subpackage WP-Bootstrap
- * @since WP-Bootstrap 0.1
  *
- * Last Revised: July 16, 2012
  */
 
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?> 
-<div class="page-bg">
-  <div class="container page-body">
+<div class="page-body">
+  <div class="container">
     <div class="row">
       <div class="span12">
         <?php if ( function_exists( 'breadcrumbs' ) ) breadcrumbs(); ?>
@@ -33,6 +31,7 @@ get_header(); ?>
     </div>
   </div>
 </div>
+
 
 
 <?php get_footer(); ?>

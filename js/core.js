@@ -65,7 +65,9 @@
       });
 
     // carousel demo
-    $('#myCarousel').carousel();
+    $('#myCarousel').carousel({
+	interval:4000
+    });
     // Make first item in the slider active
     jQuery("#myCarousel .carousel-inner div:first-child").addClass('active');
 
