@@ -151,7 +151,7 @@ function breadcrumbs() {
       $thisCat = get_category($thisCat);
       $parentCat = get_category($thisCat->parent);
       if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-      echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
+      echo $before . 'Project Category: "' . single_cat_title('', false) . '"' . $after;
 
     } elseif ( is_day() ) {
       echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
