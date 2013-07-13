@@ -722,3 +722,14 @@ if ( !function_exists( 'nectar_page_header' ) ) {
      
     }
 }
+
+// THIS GIVES US SOME OPTIONS FOR STYLING THE ADMIN AREA
+function custom_colors() {
+   echo '<style type="text/css">
+            .thumbnail .slider-thumb {
+                width:150px;
+            }
+         </style>';
+}
+
+add_action('admin_head', 'custom_colors');

@@ -5,3 +5,7 @@
  */
 
 @import url('options.css');
+
+.thumbnail .slider-thumb {
+    width:125px;
+}

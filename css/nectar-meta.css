@@ -312,3 +312,7 @@ div.theme-logo {
 	float: left;
 	background-image: url('../img/icons/themenectar.jpg');
 }
+
+.thumbnail .slider-thumb {
+    width:150px;
+}
